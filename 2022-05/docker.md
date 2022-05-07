@@ -1,5 +1,9 @@
 # Docker
 
+## 安装
+1.https://www.docker.com/get-started/
+2.
+
 查看所有容器           `docker ps -a`
 进入容器              `docker exec -it [container id] /bin/bash` (-it 交互式终端)
 停用全部运行中容器      `docker stop $(docker ps -q)`
@@ -11,3 +15,6 @@
 容器使用多个端口       `docker run -p 22:33 -p 200:230 image`
 公开一串端口          `docker run -it -p 7100-7120:7100-7120/tcp `
 提交更改              `docker commit -a "wangshibo" -m "this is test" 651a8541a47d myubuntu:v1`
+
+
+数据库运行            `docker run -itd --name mysql-test -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 mysql`
