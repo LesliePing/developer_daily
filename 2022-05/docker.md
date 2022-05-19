@@ -31,3 +31,6 @@
 `docker run -it -d --name haproxy-node1 -p 4001:8888 -p 4002:3306 --restart always --privileged=true -v /home/apps/haproxy:/usr/local/etc/haproxy --net=net1 --ip 172.18.0.7 haproxy:2.3.13`
 
 `haproxy -f /usr/local/etc/haproxy/haproxy.cfg`
+
+## docker端口映射
+`docker run -p 9989:4200 -dit -v /F/ngx-admin:/projects --name my centos:nvm_2.0 bash`
